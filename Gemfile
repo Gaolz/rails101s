@@ -4,6 +4,7 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'nprogress-rails'
+gem 'puma' #使用 puma 做 server
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -35,6 +36,7 @@ group :development do
 	gem 'capistrano-rvm', "~> 0.1.1", require: false
 	gem 'capistrano-rails', "~> 1.1", require: false
 	gem 'capistrano-rbenv', "~> 2.0", require: false  # production server use rbenv
+	gem 'capistrano3-puma'
 end
 
 # Use ActiveModel has_secure_password

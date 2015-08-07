@@ -43,6 +43,13 @@ set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/ca
 # set :keep_releases, 5
 
 namespace :deploy do
+	desc 'Restart application'
+	task :restart do
+		on roles(:app), in: :sequence, wait: 5 do
+		end
+	end
+	after :restart, :'puma:restart'  #添加此项重启 puma
+	after :publishing, :restart
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do

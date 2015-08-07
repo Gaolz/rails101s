@@ -23,6 +23,19 @@
 role :app, %w{glz@gaowanxing.com}
 role :web, %w{glz@gaowanxing.com}
 role :db,  %w{glz@gaowanxing.com}
+server 'gaowanxing.com', user: 'glz', roles: %w{web app}
+# puma
+set :puma_state, "#{shared_path}/pids/puma.state"
+set :puma_pid, "#{shared_path}/pids/puma.pid"
+set :puma_bind, "unix://#{shared_path}pids/puma.sock"
+#set :puma_conf, "config/puma.rb"
+set :puma_access_log, "#{shared_path}/log/puma_error.log"
+set :puma_error_log, "#{shared_path}/log/puma_access.log"
+set :puma_role, :app
+set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
+set :puma_threads, [0,16]
+set :puma_workers, 0
+set :puma_preload_app, true
 
 
 
