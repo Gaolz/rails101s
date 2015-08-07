@@ -11,7 +11,16 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require nprogress
+ *= require nprogress-bootstrap
  *= require_self
  */
 
- @import "bootstrap";
+$nprogress-color: sky-blue;
+$nprogress-height: 5px;
+$nprogress-zindex: 10100;
+
+@import "bootstrap";
+
+@import "nprogress";
+@import "nprogress-bootstrap";

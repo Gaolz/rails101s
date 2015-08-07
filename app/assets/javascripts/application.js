@@ -15,4 +15,6 @@
 //= require bootstrap/dropdown
 //= require bootstrap/alert
 //= require turbolinks
+//= require nprogress
+//= require nprogress-turbolinks
 //= require_tree .
