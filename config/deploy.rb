@@ -2,7 +2,10 @@
 lock '3.4.0'
 
 set :application, 'rails101s'
+set :scm, :git
+set :branch, 'master'
 set :repo_url, 'https://github.com/Gaolz/rails101s.git'
+set :rails_env, 'production'
 
 # rbenv 的设定
 set :rbenv_type, :user
@@ -40,7 +43,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/ca
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 5
 
 namespace :deploy do
 	desc 'Restart application'
