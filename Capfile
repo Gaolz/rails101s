@@ -21,7 +21,6 @@ require 'capistrano/deploy'
  require 'capistrano/bundler'
  require 'capistrano/rails/assets'
  require 'capistrano/rails/migrations'
- require 'capistrano/puma'  #因为使用 puma 做 server, 所以要加上这一条
 # require 'capistrano/passenger'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
