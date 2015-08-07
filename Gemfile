@@ -32,10 +32,11 @@ group :development do
 	gem 'brakeman', require: false
 	gem 'rails_best_practices', require: false
 	gem 'sqlite3'
-	gem 'capistrano', "~> 3.1", require: false
-	gem 'capistrano-rvm', "~> 0.1.1", require: false
-	gem 'capistrano-rails', "~> 1.1", require: false
-	gem 'capistrano-rbenv', "~> 2.0", require: false  # production server use rbenv
+	gem 'capistrano', "~> 3.4.0", require: false
+	gem 'capistrano-rvm', require: false
+	gem 'capistrano-bundler', require: false
+	gem 'capistrano-rails', require: false
+	gem 'capistrano-rbenv', require: false  # production server use rbenv
 	gem 'capistrano3-puma'
 end
 
