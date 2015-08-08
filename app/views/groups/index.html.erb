@@ -2,15 +2,13 @@
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<td>#</td>
-				<td>Title</td>
-				<td>Description</td>
+				<td>组名</td>
+				<td>概述</td>
 			</tr>
 		</thead>
 		<tbody>
 			<% @groups.each do |group| %>
 				<tr>
-					<td>#</td>
 					<td><%= link_to(truncate(group.title, length: 15), group_path(group)) %></td>
 					<td><%= group.description %></td>
 					<td>

@@ -7,12 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<img src=<%= "#{asset_path("night.jpg")}" %> alt="背景图" id="rainyday">
 <div class="container-fluid">
-	<%= render "common/navbar" %>
 	<%= notice_msg %>
-	<%= yield %>
+	<div class="wallpaper">
+		<%= yield %>
+	</div>
 </div>
-	<%= render "common/footer" %>
-
 </body>
 </html>
