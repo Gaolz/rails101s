@@ -17,4 +17,6 @@
 //= require turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
+//= require rainyday
+//= require glz
 //= require_tree .
