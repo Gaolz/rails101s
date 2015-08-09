@@ -3,10 +3,10 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :name, required: true, label: false, placeholder: "名称" %>
-      <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "邮箱" %>
-      <%= f.input :password, required: true, label: false, placeholder: "密码" %>
-      <%= f.input :password_confirmation, required: true, label: false, placeholder: "确认密码" %>
+      <%= f.input :name, required: true, label: false, placeholder: "名称", icon: "fa fa-user" %>
+      <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "邮箱", icon: "fa fa-envelope-o fa-fw" %>
+      <%= f.input :password, required: true, label: false, placeholder: "密码", icon: "fa fa-lock" %>
+      <%= f.input :password_confirmation, required: true, label: false, placeholder: "确认密码", icon: "fa fa-lock" %>
       <div class="form-actions">
         <%= f.button :submit, "注册", class: "btn-success" %>
       </div>

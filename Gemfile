@@ -37,6 +37,7 @@ group :development do
 	gem 'capistrano-bundler', require: false
 	gem 'capistrano-rails', require: false
 	gem 'capistrano-rbenv', require: false  # production server use rbenv
+	gem 'pry-rails'
 end
 
 # Use ActiveModel has_secure_password

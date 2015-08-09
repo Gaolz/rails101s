@@ -15,7 +15,7 @@
  *= require nprogress-bootstrap
  *= require font-awesome
  *= require_self
- */
+ */	
 
 $nprogress-color: sky-blue;
 $nprogress-height: 5px;
@@ -26,7 +26,10 @@ $nprogress-zindex: 10100;
 @import "nprogress";
 @import "nprogress-bootstrap";
 
-@import "font-awesome";
+
+body{
+	height: 100%;
+}
 
 /* navbar */
 nav{
@@ -36,8 +39,8 @@ nav{
 	}
 }
 
-
 /* signup */
+
 #rainyday{
 	width: 100%;
 	height: 100%;
@@ -59,8 +62,38 @@ nav{
 			padding: 25px;
 			.form-group, .form-actions{
 				font-size: 1.16rem; height: 42px;
+				position: relative;
 				input{height: 100%; width: 100%;}
+				&>i{
+					right: auto;
+					left: 1px;
+					position: absolute;
+					text-align: center;
+					top: 0px;
+					width: 2.6em;
+					height: 100%;
+					opacity: 0.5;
+					font-size: 1.5em;
+					&:before{
+						left: 0;
+						position: absolute;
+						text-align: center;
+						top: 30%;
+						width: 100%;
+					}
+				}
+			}
+			.form-group{
+				input{padding-left: 2.8em !important;}
 			}
 		}
 	}
+}
+/* users_form */
+.users-form-header{
+	position: absolute;
+	top: 30px;
+	z-index: 3000;
+	right: 40px;
+	a{margin-right: 5px;}
 }
