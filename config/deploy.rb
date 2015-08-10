@@ -48,13 +48,21 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 set :keep_releases, 5
 
 namespace :deploy do
+	desc 'Restart app'
+	task :restart do
+		on roles(:all) do
+			within release_path do
+				execute :touch, "#{current_path}/tmp/restart.txt"
+			end
+		end
+	end
+
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
-      # within release_path do
-      	run "touch #{RAILS_ROOT}/tmp/restart.txt"  # 重启 rails 
+      within release_path do
         execute :rake, 'cache:clear'
-      # end
+      end
     end
   end
 end
