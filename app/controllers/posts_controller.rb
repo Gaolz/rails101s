@@ -16,10 +16,15 @@ class PostsController < ApplicationController
 		@post = @group.posts.build(post_params)
 		@post.author = current_user
 
-		if @post.save
-			redirect_to group_path(@group), notice: "新增文章成功！"
-		else
-			render :new
+		respond_to do |format|
+			if @post.save
+				# redirect_to group_path(@group), notice: "新增文章成功！"
+				format.html {}
+				format.js
+			else
+				format.html { render :new }
+				format.js
+			end
 		end
 	end
 

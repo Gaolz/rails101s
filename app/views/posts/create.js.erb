@@ -1,0 +1,2 @@
+$("tbody>tr:last-child").after("<%= escape_javascript(render(partial: 'layouts/post_form', locals: {post: @post})) %>")
+$("#post_content").val("")
