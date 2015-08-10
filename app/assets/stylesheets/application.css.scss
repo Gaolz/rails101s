@@ -39,6 +39,22 @@ nav{
 	}
 }
 
+/* login in */
+#new_user{
+	.form-inputs{
+		.user_remember_me{
+			label{font-size: 14px;font-style: bold;position: relative;padding-left: 30px;}
+			#user_remember_me{
+				position: absolute;
+				top: 0; left: 0;
+				width: 25px; height: 25px;
+				border-radius: 50;
+				margin: 0 0;
+			}
+		}
+	}
+}
+
 /* signup */
 
 #rainyday{
@@ -53,7 +69,7 @@ nav{
 	height: 100%;
 	position: absolute;
 	z-index: 100;
-	.signup-form{
+	.signup-form, .login-in{
 		margin: 0 auto;
 		padding-top: 180px;
 		width: 25%;
