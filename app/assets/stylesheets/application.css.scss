@@ -112,4 +112,8 @@ nav{
 	z-index: 3000;
 	right: 40px;
 	a{margin-right: 5px;}
+	.fa-github{
+		margin-top: -5px;
+		&:hover{}
+	}
 }

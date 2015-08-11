@@ -8,11 +8,14 @@
 </head>
 <body>
 <div class="users-form-header">
-	<%= link_to "主页", root_path, class: "btn btn-info pull-right btn-sm" %>
+  <%= link_to "/users/auth/github", class: "pull-right" do %>
+  	<i class="fa fa-github fa-3x"></i>
+  <% end %>
+	<%= link_to "主页", root_path, class: "btn btn-info pull-left" %>
 	<% if params[:controller] == 'users/registrations' %>
-		<%= link_to "登录", new_user_session_path, class: "btn btn-success pull-right btn-sm" %>
+		<%= link_to "登录", new_user_session_path, class: "btn btn-success pull-right" %>
 	<% else %>
-		<%= link_to "注册", new_user_registration_path, class: "btn btn-success pull-right btn-sm" %>
+		<%= link_to "注册", new_user_registration_path, class: "btn btn-success pull-right" %>
 	<% end %>
 </div>
 <img src=<%= "#{asset_path("night.jpg")}" %> alt="背景图" id="rainyday">
