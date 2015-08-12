@@ -47,16 +47,10 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-namespace :deploy do
-	desc 'Restart app'
-	task :restart do
-		on roles(:all) do
-			within release_path do
-				execute :touch, "#{current_path}/tmp/restart.txt"
-			end
-		end
-	end
+# restart using 'passenger-config restart-app'
+set :passenger_restart_with_touch, false
 
+namespace :deploy do
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
