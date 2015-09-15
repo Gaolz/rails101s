@@ -33,6 +33,11 @@ body{
 
 /* navbar */
 nav{
+	height: 100%;
+	#glz-headpicture{
+		border-radius: 50%;
+		height: 100%;
+	}
 	.navbar-right{
 		line-height: 2;
 		margin-bottom: 0;
