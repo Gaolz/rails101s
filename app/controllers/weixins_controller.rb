@@ -6,7 +6,7 @@ class WeixinsController < ApplicationController
 	 	@timestamp = params["timestamp"]
 	 	@nonce = params["nonce"]
 	 	    
- 	  	@token = ENV["weixin_token"]
+ 	  	@token = "weixin"
  	  	@tmpArr = [@token, @timestamp, @nonce]
  	  	@tmpArr.sort!
  	  	@tmpStr = @tmpArr.join
